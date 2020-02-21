@@ -19,10 +19,10 @@ install:
 	ln -sf a2enmod $(DESTDIR)/$(SBINDIR)/a2dismod
 	ln -sf a2enmod $(DESTDIR)/$(SBINDIR)/a2dissite
 # install available modules
-	cp -f mods-available/* $(apache_conf)/mods-available/
+	cp -r mods-available/ $(apache_conf)/mods-available/
 # install man pages
 	install -dm755 $(DESTDIR)/$(MANDIR)
-	cp -f man/* $(DESTDIR)/$(MANDIR)/
+	cp -r man/ $(DESTDIR)/$(MANDIR)/
 # install other configuration files
 	cp conf/* -fr $(apache_conf)/
 
