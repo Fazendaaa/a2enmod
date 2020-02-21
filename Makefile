@@ -14,7 +14,7 @@ install:
 	install -dm755 $(apache_conf)/sites-enabled
 	install -dm755 $(apache_conf)/sites-available
 # install a2enmod and create symlinks
-	install -Dm755 a2enmod $(DESTDIR)/$(SBINDIR)/a2enmod
+	cp a2enmod $(DESTDIR)/$(SBINDIR)/a2enmod
 	ln -sf a2enmod $(DESTDIR)/$(SBINDIR)/a2ensite
 	ln -sf a2enmod $(DESTDIR)/$(SBINDIR)/a2dismod
 	ln -sf a2enmod $(DESTDIR)/$(SBINDIR)/a2dissite
